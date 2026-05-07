@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Task 1 & Task 8: Navigation Bar, Home Icon & Styled Name */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .home-icon {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .logo-name {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        /* Task 2: Navigation Links (Bold & Underline on Hover) */
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #3498db;
+        }
+
+        /* Section Layout Containers */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* Task 3: About Me Section */
+        #about-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Task 4: Skills Section (5 Skills with Logos) */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            width: 160px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 50px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Task 5 & 6: Projects & Recommendations Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 5px solid #3498db;
+        }
+
+        .card h3 { margin-top: 0; color: #2c3e50; }
+        
+        /* Task 7: Recommendation Form */
+        .form-container {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .form-container h3 { margin-top: 0; }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: none;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Task 9: Pop-up Confirmation */
+        #custom-popup {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: bottom 0.5s ease;
+            z-index: 2000;
+        }
+
+        #custom-popup.show {
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <i class="fas fa-home home-icon"></i>
+            <span class="logo-name">Darshan Gajanan Patil</span>
+        </a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Project details</a>
+            <a href="#skills">Skills</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div id="about-container">
+            <img src="C:\Users\patil\Documents\Passport_Photograph.jpg" alt="Profile Picture" class="profile-img">
+            <div>
+                <h3>Hi, I'm Darshan!</h3>
+                <p>I am a passionate software developer with experience of building modern, responsive web applications. I specialize in front-end technologies and love turning complex problems into beautiful, intuitive interfaces. When I'm not coding, you can find me hiking or reading up on the latest tech trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5" style="color: #e34c26;"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js" style="color: #f0db4f;"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react" style="color: #61dafb;"></i>
+                <h3>React JS</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python" style="color: #3776ab;"></i>
+                <h3>Python</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Project Details</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>E-Commerce Web App</h3>
+                <p>A full-stack online retail platform featuring user authentication, payment gateway integration, and a dynamic shopping cart experience. Built with React and Node.js.</p>
+            </div>
+            <div class="card">
+                <h3>Weather Forecast Dashboard</h3>
+                <p>A responsive dashboard that hooks into a third-party REST API to provide real-time weather updates, 7-day forecasts, and interactive weather maps.</p>
+            </div>
+            <div class="card">
+                <h3>Task Management Tool</h3>
+                <p>A sleek productivity application allowing users to track their daily routines, utilizing local storage and a drag-and-drop Kanban board interface.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        
+        <div class="card-grid" id="rec-list">
+            <div class="card">
+                <h3>Sarah Jenkins</h3>
+                <p>"Alex is an incredibly talented developer. Their attention to detail and ability to deliver projects on time is unmatched. A great team player!"</p>
+            </div>
+            <div class="card">
+                <h3>Michael Chen</h3>
+                <p>"Working with Alex was a fantastic experience. They completely revamped our front-end architecture, making it much more scalable and maintainable."</p>
+            </div>
+            <div class="card">
+                <h3>Emily Roberts</h3>
+                <p>"I highly recommend Alex for any web development role. Their expertise in JavaScript and React brought our product vision to life beautifully."</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h3>Leave a Recommendation</h3>
+            <form id="rec-form">
+                <label for="rec-name">Your Name</label>
+                <input type="text" id="rec-name" placeholder="John Doe" required>
+                
+                <label for="rec-message">Your Recommendation</label>
+                <textarea id="rec-message" rows="4" placeholder="Share your experience working with me..." required></textarea>
+                
+                <button type="submit">Submit Recommendation</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="custom-popup">Thank you for leaving a recommendation!</div>
+
+    <script>
+        document.getElementById('rec-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+
+            // Get form values
+            const name = document.getElementById('rec-name').value;
+            const message = document.getElementById('rec-message').value;
+
+            // Create new recommendation card element
+            const newCard = document.createElement('div');
+            newCard.classList.add('card');
+            newCard.innerHTML = `
+                <h3>${name}</h3>
+                <p>"${message}"</p>
+            `;
+
+            // Append to the list
+            document.getElementById('rec-list').appendChild(newCard);
+
+            // Clear the form
+            document.getElementById('rec-form').reset();
+
+            // Show Popup
+            const popup = document.getElementById('custom-popup');
+            popup.classList.add('show');
+
+            // Hide Popup after 3 seconds
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
