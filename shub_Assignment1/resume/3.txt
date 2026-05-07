@@ -1,0 +1,27 @@
+Name: Priya Verma
+Email: priyaverma@email.com
+Phone: +91 9123456789
+
+Education:
+Bachelor of Engineering in Information Technology
+LMN Institute of Technology, Mumbai
+2020 - 2024
+
+Skills:
+- Java
+- OOP Concepts
+- Web Development (HTML, CSS, JavaScript)
+- MySQL
+
+Projects:
+- Online Voting System
+- E-commerce Website
+
+Certifications:
+- Java Programming Certification
+- Web Development Bootcamp
+
+Strengths:
+- Leadership
+- Communication Skills
+- Analytical Thinking

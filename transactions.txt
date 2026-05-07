@@ -1,0 +1,4 @@
+tx1: Alice pays Bob 10 BTC
+tx2: Bob pays Charlie 5 BTC
+tx3: Charlie pays Dave 2 BTC
+tx4: Dave pays Eve 1 BTC

@@ -1,0 +1,28 @@
+Name: Shubhankar Jakate
+Email: aman.patel@email.com
+Phone: +91 9325815724
+
+Education:
+Bachelor of Technology in Artificial Intelligence
+DEF University, Bangalore
+2021 - 2025
+
+Skills:
+- Python
+- Machine Learning
+- Deep Learning
+- Pandas, NumPy
+- NLP Basics
+
+Projects:
+- Chatbot using NLP
+- Resume Ranking System using ML
+
+Achievements:
+- Hackathon Runner-Up (AI Track)
+- Kaggle Competition Participant
+
+Strengths:
+- Research Oriented
+- Creative Thinking
+- Strong Coding Skills

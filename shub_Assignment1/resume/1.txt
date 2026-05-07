@@ -1,0 +1,27 @@
+Name: Yash Maske
+Email: yash.maske@email.com
+Phone: +91 9876543210
+
+Education:
+Bachelor of Technology in Computer Science
+XYZ Engineering College, Pune
+2021 - 2025
+
+Skills:
+- Python
+- Data Structures
+- SQL
+- Machine Learning Basics
+
+Projects:
+- Student Result Analysis using Python
+- Resume Screening Tool using NLP
+
+Internship:
+Software Development Intern at ABC Tech
+June 2024 - August 2024
+
+Strengths:
+- Problem Solving
+- Team Collaboration
+- Quick Learner
