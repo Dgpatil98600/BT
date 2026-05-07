@@ -1,0 +1,20 @@
+[
+  {
+    "index": 0,
+    "timestamp": 1774979524.726343,
+    "filename": "genesis.txt",
+    "file_content": "Genesis Block - The Beginning of the Chain",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "nonce": 2955,
+    "hash": "000506b2d892ab29995078733ba61f83a9cb836dde3b9014dd5e168a8aa26fa5"
+  },
+  {
+    "index": 1,
+    "timestamp": 1774979526.8164482,
+    "filename": "contract.txt",
+    "file_content": "SMART CONTRACT AGREEMENT\n        \nParty A agrees to transfer 100 tokens to Party B\nupon completion of the following conditions:\n1. Delivery of goods by March 15, 2025\n2. Quality inspection passed\n3. Payment verification completed\n\nSigned digitally on the blockchain.\n",
+    "previous_hash": "000506b2d892ab29995078733ba61f83a9cb836dde3b9014dd5e168a8aa26fa5",
+    "nonce": 7469,
+    "hash": "000c83e9446b3c5cb4d51af565fbb0d5a86cea2defe31f36f98a9126300dfd9a"
+  }
+]
